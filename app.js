@@ -12,6 +12,10 @@ const app = express();
 app.use(express.json());
 connectDB();
 
+app.use("/", (req, res) => {
+  res.send("Homepage");
+});
+
 app.use("/", routeBooks);
 app.use("/", routeUsers);
 app.use("/", routeOTP);
