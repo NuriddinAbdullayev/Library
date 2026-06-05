@@ -2,10 +2,10 @@ const express = require("express");
 const router = express.Router();
 const controllerBooks = require("../controllers/controllerBooks");
 
-router.get("/books", controllerBooks.getBooks);
+router.get("/getbooks", controllerBooks.getBooks);
 
-router.post("/books", controllerBooks.createBook);
+router.post("/postbook", controllerBooks.createBook);
 
-router.delete("/delete", controllerBooks.deleteAll);
+router.delete("/deletebook", controllerBooks.deleteAll);
 
 module.exports = router;
